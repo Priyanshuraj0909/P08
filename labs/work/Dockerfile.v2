@@ -1,0 +1,16 @@
+FROM python:3.12-slim
+
+# Fix 3: a working folder, so files do not land in the image root.
+WORKDIR /app
+
+# Fix 1: install libraries before copying code, so this layer stays cached.
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY app.py .
+COPY model.joblib .
+
+EXPOSE 8000
+
+# Fix 2: listen on every interface, not just inside the container.
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
