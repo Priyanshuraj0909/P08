@@ -4,7 +4,7 @@ Delivery-time prediction service (FastAPI + scikit-learn) packed into a Docker i
 
 | Path | What it is |
 |---|---|
-| `labs/P08_ROLLNUMBER.ipynb` | The practical notebook, fully run (9/9 self-check) |
+| `labs/P08_S24CSEU1142.ipynb` | The practical notebook, fully run (9/9 self-check) |
 | `labs/work/Dockerfile` | Dockerfile for image `delivery-api:1.0` |
 | `labs/work/Dockerfile.v2` | Task T2 fixed Dockerfile, image `delivery-api:2.0` |
 | `labs/work/.dockerignore` | Build-context ignore file |
